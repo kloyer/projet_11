@@ -1,0 +1,21 @@
+.footer-container {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    
+    .footer-logo {
+      width: 100px; // Ajustez la taille selon vos besoins
+    }
+  
+    p {
+      margin: 0; // Assurez-vous qu'il n'y a pas de marge par défaut
+      font-size: 14px; // Ajustez la taille de police selon vos besoins
+    }
+  }
+  

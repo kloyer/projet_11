@@ -4,7 +4,7 @@ import './Banner.scss';
 function Banner() {
   return (
     <div className="banner-container">
-      <h1>Banner</h1>
+      <h1>Chez vous, partout et ailleurs</h1>
     </div>
   );
 }

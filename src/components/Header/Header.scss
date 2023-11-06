@@ -1,0 +1,32 @@
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 100px;
+
+    img {
+      width: 210px;
+      height: 68px;
+    } 
+
+  
+  .navigation ul {
+    list-style: none;
+    padding: 0;
+    
+    li {
+      display: inline;
+      margin-right: 20px; // Ajustez selon l'espacement souhaité
+
+      a {
+        text-decoration: none;
+        color: #ff0000; // Couleur des liens
+
+        &.active {
+          text-decoration: underline; // Souligne le lien actif
+          color: #ff0000; // Changez pour la couleur souhaitée pour le lien actif
+        }
+      }
+    }
+  }
+}

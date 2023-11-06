@@ -1,54 +1,17 @@
-.header {
-    width: 100%;
-    height: 223px;
-    //background-image: url('path-to-your-background-image.jpg');
-    background-size: cover;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 36px; // ajustez selon la maquette
-    
-    // pour les écrans plus petits que 1240px
-    @media (max-width: 1240px) {
-      height: auto;
-      padding: 20px;
-    }
+.home-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+  padding: 2rem;
+  margin-top: 2rem;
+  background-color: #F6F6F6;
+  border-radius: 10px;
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr); // Deux colonnes sur les écrans plus petits
   }
-  
-  .logements-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px; // ajustez selon la maquette
-    justify-content: center;
-    margin-top: 20px; // ajustez selon l'espacement désiré
-  
-    .card {
-      width: 340px; // largeur fixe, ajustez selon la maquette
-      height: 340px;
-      border-radius: 10px;
-      overflow: hidden;
-      position: relative;
-  
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-  
-      .title {
-        position: absolute;
-        bottom: 10px; // ajustez selon la maquette
-        left: 10px;
-        color: white;
-      }
-  
-      // pour les écrans plus petits
-      @media (max-width: 1240px) {
-        width: 100%;
-        max-width: 340px;
-      }
-    }
+
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr; // Une colonne sur les écrans très petits
   }
-  
+}

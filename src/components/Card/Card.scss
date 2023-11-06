@@ -1,11 +1,14 @@
 .card-link {
-    text-decoration: none; // Enlève le soulignement des liens
-    color: inherit; // Hérite de la couleur du texte parent
+  text-decoration: none;
+  color: inherit;
+  height: 280px;
   
     .card {
       border-radius: 10px; // Radius que vous souhaitez
       overflow: hidden; // Pour s'assurer que l'image ne dépasse pas les bords arrondis
       transition: transform 0.3s ease; // Un effet de transition pour le survol
+      height: 280px;
+      
   
       &:hover {
         transform: scale(1.05); // Un léger effet de zoom au survol
@@ -13,18 +16,17 @@
   
       .card-image {
         width: 100%;
-        //height: auto;
-        border-radius: 10px 10px 0 0; // Arrondir seulement le haut de l'image
+        height: 100%;
+        border-radius: 10px;
       }
   
       .card-title {
-        padding: 0.5rem; // Espace autour du titre dans la carte
-        //background-color: rgba(0, 0, 0, 0.7); // Un fond semi-transparent pour le titre
-        color: white; // Couleur du texte
-        position: absolute; // Positionne par rapport au parent .card
-        bottom: 0;
+        position: relative;
+        padding: 0.5rem;
+        color: white;
+        bottom: 50px;
         left: 0;
-        border-radius: 0 0 0 10px; // Arrondir seulement le coin en bas à gauche
+        width: 33%;
       }
     }
   }

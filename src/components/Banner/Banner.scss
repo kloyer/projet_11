@@ -1,0 +1,23 @@
+.banner-container {
+    background-image: url('../../assets/images/banner-image.png');
+    background-size: cover;
+    background-position: center;
+    text-align: center; // Centre le texte
+    padding: 2rem 0; // Ajustez selon votre mise en page
+
+    width: 100%;
+    height: 120px;
+    margin-top: 20px;
+    border-radius: 25px;;
+
+    display: flex;
+    justify-content: center; // Centre le contenu horizontalement
+    align-items: center; // Centre le contenu verticalement
+  
+    h1 {
+      color: white; // Ou la couleur du texte correspondant à votre design
+      margin: 0; // Élimine la marge par défaut du titre
+      font-size: 2.5rem; // Taille de la police à ajuster selon le design
+      font-weight: bold; // Épaisseur de la police si nécessaire
+    }
+  }  

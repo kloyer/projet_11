@@ -1,0 +1,64 @@
+// Exemple de variables pour les couleurs et la police
+$primary-color: #FF6060;
+$secondary-color: #FFD2D2;
+$font-family: 'Montserrat', sans-serif;
+
+// Reset des styles par défaut pour les éléments de navigation
+.nav-link {
+  text-decoration: none;
+  color: inherit;
+  &.active {
+    border-bottom: 2px solid $primary-color;
+  }
+}
+
+// Styles pour le slider
+.slider {
+  position: relative;
+  // ...
+
+  .slider-arrow {
+    position: absolute;
+    top: 50%;
+    // ...
+  }
+}
+
+// Styles pour les informations du logement
+.logement-info {
+  .title {
+    font-family: $font-family;
+    // ...
+  }
+  .location {
+    // ...
+  }
+  .tag {
+    display: inline-block;
+    background-color: $secondary-color;
+    // ...
+  }
+}
+
+// Styles pour le rating
+.rating {
+  .star {
+    color: $primary-color;
+    &.empty {
+      color: #ccc;
+    }
+  }
+}
+
+// Styles pour l'hôte
+.host-info {
+  display: flex;
+  align-items: center;
+  .profile-picture {
+    border-radius: 50%;
+    // ...
+  }
+  .name {
+    // ...
+  }
+}
