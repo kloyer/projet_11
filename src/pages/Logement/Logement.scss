@@ -1,64 +1,89 @@
-// Exemple de variables pour les couleurs et la police
-$primary-color: #FF6060;
-$secondary-color: #FFD2D2;
-$font-family: 'Montserrat', sans-serif;
-
-// Reset des styles par défaut pour les éléments de navigation
-.nav-link {
-  text-decoration: none;
-  color: inherit;
-  &.active {
-    border-bottom: 2px solid $primary-color;
+.logement-container {
+    // Appliquer des styles généraux pour le conteneur
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    max-width: 1200px; // par exemple
   }
-}
-
-// Styles pour le slider
-.slider {
-  position: relative;
-  // ...
-
-  .slider-arrow {
-    position: absolute;
-    top: 50%;
-    // ...
+  
+  .logement-images {
+    // Styles pour le carrousel des images
+    margin-bottom: 20px; // par exemple
   }
-}
-
-// Styles pour les informations du logement
-.logement-info {
-  .title {
-    font-family: $font-family;
-    // ...
+  
+  .logement-details {
+    // Styles pour les détails du logement
+    h2 {
+      font-size: 1.5em; // par exemple
+      color: #333; // par exemple
+      margin-bottom: 0.5em;
+    }
+    
+    h3 {
+      font-size: 1.2em;
+      color: #777; // par exemple
+      margin-bottom: 1em;
+    }
+    
+    .logement-tags {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 1em; // ajoute un espace au-dessus des tags
+        gap: 0.5em; // espace entre les tags
+      }
+      
+      .tag {
+        background-color: #ffd2d2;
+        border-radius: 15px;
+        padding: 0.5em 1em;
+        font-size: 0.9em;
+        white-space: nowrap;
+      }      
   }
-  .location {
-    // ...
-  }
-  .tag {
-    display: inline-block;
-    background-color: $secondary-color;
-    // ...
-  }
-}
-
-// Styles pour le rating
-.rating {
-  .star {
-    color: $primary-color;
-    &.empty {
-      color: #ccc;
+  
+  .logement-host {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  
+    img {
+      width: 50px; // par exemple
+      height: 50px; // par exemple
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+  
+    p {
+      font-weight: bold;
     }
   }
-}
-
-// Styles pour l'hôte
-.host-info {
-  display: flex;
-  align-items: center;
-  .profile-picture {
-    border-radius: 50%;
-    // ...
+  
+  .logement-rating {
+    .star-rating {
+        font-size: 1.5em;
+        color: #ffdd00; // Couleur jaune pour les étoiles remplies
+        .empty-star {
+          color: #cccccc; // Couleur grise pour les étoiles vides
+        }
+      }      
   }
-  .name {
-    // ...
+  
+  .logement-collapse-sections {
+    // Styles pour les sections repliables
+    .collapse-title {
+      // Styles pour le titre des sections repliables
+    }
+    
+    .collapse-content {
+      // Styles pour le contenu des sections repliables
+    }
   }
-}
+  
+  // Vous pouvez également ajouter des médias queries pour rendre le design réactif
+  @media (max-width: 768px) {
+    .logement-container {
+      // Adapter les styles pour les appareils mobiles
+    }
+  }
+  
+  

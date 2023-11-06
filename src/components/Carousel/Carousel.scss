@@ -1,0 +1,53 @@
+.image-carousel-container {
+    position: relative;
+    img.carousel-image {
+      width: 100%;
+      display: block;
+      height: 415px;
+    }
+    button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      cursor: pointer;
+      &:first-of-type {
+        left: 0;
+      }
+      &:last-of-type {
+        right: 0;
+      }
+    }
+    .carousel-arrow {
+      cursor: pointer;
+      background: none;
+      border: none;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+
+      img {
+        width: 100px;
+        height: 100px;
+      }
+    }
+    
+    .left {
+      left: 10px;
+    }
+    
+    .right {
+      right: 10px;
+    }
+    
+    .image-counter {
+      position: relative;
+      bottom: 20px;
+      text-align: center;
+      color: white;
+    }
+    
+  }
+  

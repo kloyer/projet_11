@@ -2,7 +2,24 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import Collapse from '../../components/Collapse/Collapse';
 import logements from '../../datas/logements.json';
+import Carousel from '../../components/Carousel/Carousel';
 import './Logement.scss';
+
+function StarRating({ rating }) {
+  const ratingStars = Array.from({ length: 5 }, (_, index) => {
+    return index < rating ? '★' : '☆';
+  });
+
+  return (
+    <div className="star-rating">
+      {ratingStars.map((star, index) => (
+        <span key={index} className={star === '★' ? 'filled-star' : 'empty-star'}>
+          {star}
+        </span>
+      ))}
+    </div>
+  );
+}
 
 function Logement() {
   const [logement, setLogement] = useState(null);
@@ -20,19 +37,23 @@ function Logement() {
   return (
     <div className="logement-container">
       <div className="logement-images">
-        {/* Ici, vous pouvez implémenter un carrousel pour les images */}
+        <Carousel images={logement.pictures} />
       </div>
       <div className="logement-details">
         <h2>{logement.title}</h2>
         <h3>{logement.location}</h3>
-        {/* Ici, vous pouvez mapper et afficher les tags */}
+        <div className="logement-tags">
+          {logement.tags.map((tag, index) => (
+            <span key={index} className="tag">{tag}</span>
+          ))}
+        </div>
       </div>
       <div className="logement-host">
         <img src={logement.host.picture} alt={`Hosted by ${logement.host.name}`} />
         <p>{logement.host.name}</p>
       </div>
       <div className="logement-rating">
-        {/* Ici, vous pouvez afficher la note du logement en étoiles */}
+        <StarRating rating={parseInt(logement.rating, 10)} />
       </div>
       <div className="logement-collapse-sections">
         <Collapse title="Description">
