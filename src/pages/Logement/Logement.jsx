@@ -24,14 +24,14 @@ function StarRating({ rating }) {
 function Logement() {
   const [logement, setLogement] = useState(null);
   const { id } = useParams();
-  const navigate = useNavigate(); // Here we instantiate the navigate function
+  const navigate = useNavigate();
 
   useEffect(() => {
     const foundLogement = logements.find(item => item.id === id);
     if (foundLogement) {
       setLogement(foundLogement);
     } else {
-      navigate('/*'); // Redirect to the 404 page if no logement is found
+      navigate('/*');
     }
   }, [id, navigate]);
 

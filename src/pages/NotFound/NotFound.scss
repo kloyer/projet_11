@@ -37,16 +37,15 @@
   }
 }
 
-/* Media query for tablets */
 @media (max-width: 768px) {
   .not-found {
     h1 {
-      font-size: 8rem; // Smaller size for 404 on tablets
+      font-size: 8rem;
       margin: 20px;
     }
 
     p {
-      font-size: 1.2rem; // Smaller font size for the error message on tablets
+      font-size: 1.2rem;
       margin: 20px;
     }
 
@@ -56,21 +55,20 @@
   }
 }
 
-/* Media query for mobile devices */
 @media (max-width: 480px) {
   .not-found {
     .logo {
-      font-size: 2rem; // Smaller logo size for mobile
+      font-size: 2rem;
       margin-bottom: 10px;
     }
 
     h1 {
-      font-size: 5rem; // Much smaller size for 404 on mobile
+      font-size: 5rem;
       margin: 10px;
     }
 
     p {
-      font-size: 1rem; // Smaller font size for the error message on mobile
+      font-size: 1rem;
       margin: 10px;
     }
 

@@ -4,16 +4,16 @@
   img.carousel-image {
     width: 100%;
     display: block;
-    height: 415px; // Default height
+    height: 415px;
     object-fit: cover;
     border-radius: 10px;
 
     @media (max-width: 768px) {
-      height: 300px; // Adjusted for tablets
+      height: 300px;
     }
 
     @media (max-width: 480px) {
-      height: 200px; // Adjusted for mobile
+      height: 200px;
     }
   }
 
@@ -25,15 +25,14 @@
     color: white;
     border: none;
     cursor: pointer;
-    // Adjust the size of buttons on smaller screens
+
     @media (max-width: 768px) {
       width: 30px;
       height: 30px;
-      font-size: 12px; // Adjust font size accordingly
+      font-size: 12px;
     }
   }
 
-  // Adjust the size and position of arrows on smaller screens
   .carousel-arrow {
     cursor: pointer;
     background: none;
@@ -42,7 +41,7 @@
     top: 50%;
     transform: translateY(-50%);
     img {
-      width: 50px; // Smaller arrows for smaller screens
+      width: 50px;
       height: 50px;
       @media (max-width: 768px) {
         width: 30px;
@@ -51,7 +50,6 @@
     }
   }
 
-  // Position arrows inside the container on smaller screens
   .left {
     left: 10px;
     @media (max-width: 768px) {
@@ -66,15 +64,14 @@
     }
   }
 
-  // Adjust the image counter size and position
   .image-counter {
-    position: absolute; // Changed from relative to absolute
-    bottom: 10px; // Adjust for smaller screens
-    width: 100%; // Ensure it spans the width of the container
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
     text-align: center;
     color: white;
     @media (max-width: 768px) {
-      font-size: 12px; // Adjust font size for smaller screens
+      font-size: 12px;
     }
   }
 }

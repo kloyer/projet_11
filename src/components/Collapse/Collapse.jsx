@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 import './Collapse.scss';
-import arrowUpDown from '../../assets/images/arrow-up-down.png'; // Add this import statement
+import arrowUpDown from '../../assets/images/arrow-up-down.png';
 
 function Collapse({ title, children }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,7 +10,6 @@ function Collapse({ title, children }) {
     setIsOpen(!isOpen);
   };
 
-  // Function to determine the height of the content dynamically
   const contentHeight = isOpen ? `${contentRef.current.scrollHeight}px` : '0px';
 
   return (

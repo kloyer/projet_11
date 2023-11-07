@@ -1,6 +1,6 @@
 import React from 'react';
 import './Footer.scss';
-import logoFooter from '../../assets/images/logo-footer.png'; // Assurez-vous que le chemin est correct
+import logoFooter from '../../assets/images/logo-footer.png';
 
 function Footer() {
   return (

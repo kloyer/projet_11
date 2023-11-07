@@ -7,7 +7,7 @@
   padding: 2rem 0;
 
   width: 100%;
-  height: 120px; // Vous voudrez peut-être rendre cela plus flexible ou adaptable
+  height: 120px;
   border-radius: 25px;
   display: flex;
   justify-content: center;
@@ -21,7 +21,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.2); // Assombrir légèrement pour une meilleure lisibilité
+    background-color: rgba(0, 0, 0, 0.2);
     border-radius: inherit;
     z-index: 1;
   }
@@ -31,28 +31,26 @@
     color: white;
     text-align: center;
     font-weight: 400;
-    font-size: xxx-large; // Cette taille de police peut être trop grande pour les mobiles
+    font-size: xxx-large;
     z-index: 2;
   }
 
-  // Media query pour les tablettes
   @media (max-width: 768px) {
-    height: 100px; // Taille de bannière réduite pour les tablettes
+    height: 100px;
     padding: 1.5rem 0;
 
     .banner-text {
-      font-size: xx-large; // Taille de police réduite pour les tablettes
+      font-size: xx-large;
     }
   }
 
-  // Media query pour les téléphones mobiles
   @media (max-width: 480px) {
-    height: 80px; // Taille de bannière encore plus réduite pour les mobiles
+    height: 80px;
     padding: 1rem 0;
-    border-radius: 15px; // Rayon de bordure adapté aux petits écrans
+    border-radius: 15px;
 
     .banner-text {
-      font-size: x-large; // Taille de police adaptée pour les mobiles
+      font-size: x-large;
     }
   }
 }

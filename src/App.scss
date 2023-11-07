@@ -1,12 +1,14 @@
 html,
-body {
-   margin:0;
-   padding:0;
-   height:100%;
+body,
+#root {
    font-family: 'Montserrat';
    list-style-type: none;
+   margin: 0;
+   min-height: 100vh;
+   display: flex;
+   flex-direction: column;
 }
 main {
-   min-height:100vh;
+   
    position:relative;
 }

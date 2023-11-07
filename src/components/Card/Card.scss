@@ -4,9 +4,9 @@
   height: 280px;
 
   .card {
-    position: relative; // Ensure that the position is relative for the pseudo-elements to position correctly
+    position: relative;
     border-radius: 10px;
-    overflow: hidden; // This keeps the pseudo-element within the card boundaries
+    overflow: hidden;
     transition: transform 0.3s ease;
     height: 280px;
 
@@ -30,45 +30,45 @@
       width: 50%;
     }
 
-    &::after { // This is the new pseudo-element for the gradient
+    &::after {
       content: '';
       position: absolute;
       bottom: 0;
       left: 0;
       right: 0;
-      height: 100px; // Height of the gradient effect
-      background: linear-gradient(to top, rgba(0,0,0,0.7), transparent); // Gradient from solid black to transparent
-      border-radius: 10px 10px 0 0; // Match the border-radius of the card
-      z-index: 1; // Sit below the card title text
+      height: 100px;
+      background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+      border-radius: 10px 10px 0 0;
+      z-index: 1;
     }
   }
 
   @media (max-width: 768px) {
-    height: 200px; // Smaller height for tablets
+    height: 200px;
 
     .card {
       height: 200px;
 
       .card-title {
-        bottom: 0px; // Adjust position of title for smaller cards
-        font-size: 0.9rem; // Smaller font size for card title on tablets
+        bottom: 0px;
+        font-size: 0.9rem;
       }
     }
   }
 
   @media (max-width: 480px) {
-    height: 200px; // Even smaller height for mobile
+    height: 200px;
 
     .card {
       height: 200px;
 
       &:hover {
-        transform: none; // Remove hover effect on mobile devices
+        transform: none;
       }
 
       .card-title {
-        bottom: 0px; // Adjust position of title for even smaller cards
-        font-size: 0.8rem; // Even smaller font size for card title on mobile
+        bottom: 0px;
+        font-size: 0.8rem;
       }
     }
   }

@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/img-redundant-alt */
 import React, { useState } from 'react';
 import leftArrow from '../../assets/images/arrow-left.png';
 import rightArrow from '../../assets/images/arrow-right.png';
