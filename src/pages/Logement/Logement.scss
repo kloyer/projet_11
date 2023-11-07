@@ -126,6 +126,20 @@
       margin-bottom: 1em;
     }
   }
+
+  .logement-host {
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    width: 100%;
+    margin: 0;
+  }
+
+  .section-right {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 @media (max-width: 480px) {
@@ -134,15 +148,11 @@
   }
 
   .logement-details {
-    p  {
-      width: 100%;
+    .location,
+    p {
+      font-size: 16px;
+      width: 25%;
     }
-  }p 
-
-  .location,
-  p {
-    font-size: 16px;
-    width: 25%;
   }
 
   .logement-tags .tag {
