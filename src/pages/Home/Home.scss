@@ -3,15 +3,14 @@
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 2rem;
   padding: 2rem;
-  margin-top: 2rem;
   background-color: #F6F6F6;
   border-radius: 10px;
 
   @media (max-width: 768px) {
-    grid-template-columns: repeat(2, 1fr); // Deux colonnes sur les écrans plus petits
+    grid-template-columns: repeat(2, 1fr);
   }
 
   @media (max-width: 480px) {
-    grid-template-columns: 1fr; // Une colonne sur les écrans très petits
+    grid-template-columns: 1fr;
   }
 }

@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import Collapse from '../../components/Collapse/Collapse';
-import logements from '../../datas/logements.json';
 import Carousel from '../../components/Carousel/Carousel';
+import logements from '../../datas/logements.json';
 import './Logement.scss';
 
 function StarRating({ rating }) {
@@ -24,11 +24,16 @@ function StarRating({ rating }) {
 function Logement() {
   const [logement, setLogement] = useState(null);
   const { id } = useParams();
+  const navigate = useNavigate(); // Here we instantiate the navigate function
 
   useEffect(() => {
     const foundLogement = logements.find(item => item.id === id);
-    setLogement(foundLogement);
-  }, [id]);
+    if (foundLogement) {
+      setLogement(foundLogement);
+    } else {
+      navigate('/*'); // Redirect to the 404 page if no logement is found
+    }
+  }, [id, navigate]);
 
   if (!logement) {
     return <div>Loading...</div>;
@@ -40,20 +45,24 @@ function Logement() {
         <Carousel images={logement.pictures} />
       </div>
       <div className="logement-details">
-        <h2>{logement.title}</h2>
-        <h3>{logement.location}</h3>
-        <div className="logement-tags">
-          {logement.tags.map((tag, index) => (
-            <span key={index} className="tag">{tag}</span>
-          ))}
+        <div className='section-left'>
+          <p className='title'>{logement.title}</p>
+          <p className='location'>{logement.location}</p>
+          <div className="logement-tags">
+            {logement.tags.map((tag, index) => (
+              <span key={index} className="tag">{tag}</span>
+            ))}
+          </div>
         </div>
-      </div>
-      <div className="logement-host">
-        <img src={logement.host.picture} alt={`Hosted by ${logement.host.name}`} />
-        <p>{logement.host.name}</p>
-      </div>
-      <div className="logement-rating">
-        <StarRating rating={parseInt(logement.rating, 10)} />
+        <div className='section-right'>
+          <div className="logement-host">
+            <img src={logement.host.picture} alt={`Hosted by ${logement.host.name}`} />
+            <p>{logement.host.name}</p>
+        </div>
+        <div className="logement-rating">
+            <StarRating rating={parseInt(logement.rating, 10)} />
+          </div>
+        </div>
       </div>
       <div className="logement-collapse-sections">
         <Collapse title="Description">

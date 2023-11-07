@@ -1,89 +1,170 @@
 .logement-container {
-    // Appliquer des styles généraux pour le conteneur
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-    max-width: 1200px; // par exemple
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+.logement-images {
+  margin-bottom: 20px;
+}
+
+.logement-details {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+
+  .title {
+    font-size: 24px;
+    font-weight: 500;
+    text-align: left;
+    color: #FF6060;
+    margin: 0;
+  }
+
+  .location {
+    font-size: 18px;
+    font-weight: 500;
+    text-align: left;
+    color: #FF6060;
+    margin: 10px 0 0 0;
   }
   
-  .logement-images {
-    // Styles pour le carrousel des images
-    margin-bottom: 20px; // par exemple
+  .logement-tags {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 1em;
+      gap: 0.5em;
   }
   
-  .logement-details {
-    // Styles pour les détails du logement
-    h2 {
-      font-size: 1.5em; // par exemple
-      color: #333; // par exemple
-      margin-bottom: 0.5em;
-    }
-    
-    h3 {
-      font-size: 1.2em;
-      color: #777; // par exemple
-      margin-bottom: 1em;
-    }
-    
-    .logement-tags {
-        display: flex;
-        flex-wrap: wrap;
-        margin-top: 1em; // ajoute un espace au-dessus des tags
-        gap: 0.5em; // espace entre les tags
+  .tag {
+    background-color: #FF6060;
+    color: #fff;
+    border-radius: 15px;
+    padding: 0.5em 1em;
+    font-size: 0.9em;
+    white-space: nowrap;
+  }      
+}
+
+.logement-host {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-left: 10px;
+
+  img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+
+  p {
+    font-size: 18px;
+    font-weight: 500;
+    text-align: right;
+    color: #FF6060;
+  }
+}
+
+.logement-rating {
+  display: flex;
+  justify-content: end;
+
+  .star-rating {
+      font-size: 1.5em;
+      color: #FF6060;
+      font-weight: 900;
+
+      .empty-star {
+        color: #cccccc;
       }
-      
-      .tag {
-        background-color: #ffd2d2;
-        border-radius: 15px;
-        padding: 0.5em 1em;
-        font-size: 0.9em;
-        white-space: nowrap;
-      }      
+    }      
+}
+
+.logement-collapse-sections {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  .collapse-container {
+    width: 40%;
+    box-shadow: none;
+  }
+}
+
+// Add media queries for responsiveness
+@media (max-width: 768px) {
+  .logement-details {
+    flex-direction: column;
+
+    .location {
+      margin-top: 0.5em;
+    }
   }
   
   .logement-host {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-  
+    flex-direction: column;
+    align-items: flex-end;
+
     img {
-      width: 50px; // par exemple
-      height: 50px; // par exemple
-      border-radius: 50%;
-      margin-right: 10px;
-    }
-  
-    p {
-      font-weight: bold;
+      margin-right: 0;
+      margin-bottom: 0.5em;
     }
   }
-  
+
   .logement-rating {
-    .star-rating {
-        font-size: 1.5em;
-        color: #ffdd00; // Couleur jaune pour les étoiles remplies
-        .empty-star {
-          color: #cccccc; // Couleur grise pour les étoiles vides
-        }
-      }      
+    justify-content: space-between;
   }
-  
+
   .logement-collapse-sections {
-    // Styles pour les sections repliables
-    .collapse-title {
-      // Styles pour le titre des sections repliables
-    }
-    
-    .collapse-content {
-      // Styles pour le contenu des sections repliables
+    flex-direction: column;
+
+    .collapse-container {
+      width: 100%;
+      margin-bottom: 1em;
     }
   }
-  
-  // Vous pouvez également ajouter des médias queries pour rendre le design réactif
-  @media (max-width: 768px) {
-    .logement-container {
-      // Adapter les styles pour les appareils mobiles
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 20px;
+  }
+
+  .logement-details {
+    p  {
+      width: 100%;
     }
+  }p 
+
+  .location,
+  p {
+    font-size: 16px;
+    width: 25%;
+  }
+
+  .logement-tags .tag {
+    font-size: 0.8em;
+  }
+
+  .logement-host {
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    width: 100%;
+    margin: 0;
   }
   
-  
+  .star-rating {
+    font-size: 1em;
+  }
+
+  .section-right {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

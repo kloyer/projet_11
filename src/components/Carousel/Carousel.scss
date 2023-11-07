@@ -1,53 +1,80 @@
 .image-carousel-container {
-    position: relative;
-    img.carousel-image {
-      width: 100%;
-      display: block;
-      height: 415px;
-    }
-    button {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background-color: rgba(0, 0, 0, 0.5);
-      color: white;
-      border: none;
-      cursor: pointer;
-      &:first-of-type {
-        left: 0;
-      }
-      &:last-of-type {
-        right: 0;
-      }
-    }
-    .carousel-arrow {
-      cursor: pointer;
-      background: none;
-      border: none;
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
+  position: relative;
 
-      img {
-        width: 100px;
-        height: 100px;
+  img.carousel-image {
+    width: 100%;
+    display: block;
+    height: 415px; // Default height
+    object-fit: cover;
+    border-radius: 10px;
+
+    @media (max-width: 768px) {
+      height: 300px; // Adjusted for tablets
+    }
+
+    @media (max-width: 480px) {
+      height: 200px; // Adjusted for mobile
+    }
+  }
+
+  button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    // Adjust the size of buttons on smaller screens
+    @media (max-width: 768px) {
+      width: 30px;
+      height: 30px;
+      font-size: 12px; // Adjust font size accordingly
+    }
+  }
+
+  // Adjust the size and position of arrows on smaller screens
+  .carousel-arrow {
+    cursor: pointer;
+    background: none;
+    border: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    img {
+      width: 50px; // Smaller arrows for smaller screens
+      height: 50px;
+      @media (max-width: 768px) {
+        width: 30px;
+        height: 30px;
       }
     }
-    
-    .left {
-      left: 10px;
-    }
-    
-    .right {
-      right: 10px;
-    }
-    
-    .image-counter {
-      position: relative;
-      bottom: 20px;
-      text-align: center;
-      color: white;
-    }
-    
   }
-  
+
+  // Position arrows inside the container on smaller screens
+  .left {
+    left: 10px;
+    @media (max-width: 768px) {
+      left: 5px;
+    }
+  }
+
+  .right {
+    right: 10px;
+    @media (max-width: 768px) {
+      right: 5px;
+    }
+  }
+
+  // Adjust the image counter size and position
+  .image-counter {
+    position: absolute; // Changed from relative to absolute
+    bottom: 10px; // Adjust for smaller screens
+    width: 100%; // Ensure it spans the width of the container
+    text-align: center;
+    color: white;
+    @media (max-width: 768px) {
+      font-size: 12px; // Adjust font size for smaller screens
+    }
+  }
+}

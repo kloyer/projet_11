@@ -1,9 +1,11 @@
 import React from 'react';
+import './NotFound.scss';
 
 const NotFound = () => (
-  <div>
-    <h1>404 - Page non trouvée</h1>
-    {/* Contenu supplémentaire */}
+  <div className="not-found">
+    <h1>404</h1>
+    <p>Oups! La page que vous demandez n'existe pas.</p>
+    <a href='/'>Retourner sur la page d’accueil</a>
   </div>
 );
 

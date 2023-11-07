@@ -1,0 +1,81 @@
+.not-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #fff;
+  color: #ff6060;
+
+  .logo {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    
+    span {
+      color: #000;
+    }
+  }
+
+  h1 {
+    font-size: 12rem;
+    font-weight: bold;
+    margin: 50px;
+  }
+
+  p {
+    font-size: 1.5rem;
+    margin: 50px;
+  }
+
+  a {
+    color: #ff6060;
+    margin: 50px;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+/* Media query for tablets */
+@media (max-width: 768px) {
+  .not-found {
+    h1 {
+      font-size: 8rem; // Smaller size for 404 on tablets
+      margin: 20px;
+    }
+
+    p {
+      font-size: 1.2rem; // Smaller font size for the error message on tablets
+      margin: 20px;
+    }
+
+    a {
+      margin: 20px;
+    }
+  }
+}
+
+/* Media query for mobile devices */
+@media (max-width: 480px) {
+  .not-found {
+    .logo {
+      font-size: 2rem; // Smaller logo size for mobile
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      font-size: 5rem; // Much smaller size for 404 on mobile
+      margin: 10px;
+    }
+
+    p {
+      font-size: 1rem; // Smaller font size for the error message on mobile
+      margin: 10px;
+    }
+
+    a {
+      margin: 10px;
+    }
+  }
+}

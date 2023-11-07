@@ -1,22 +1,58 @@
 .banner-container {
-    background-image: url('../../assets/images/banner-image.png');
-    background-size: cover;
-    background-position: center;
-    text-align: center; // Centre le texte
-    padding: 2rem 0; // Ajustez selon votre mise en page
+  position: relative;
+  background-color: black;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding: 2rem 0;
 
-    width: 100%;
-    height: 120px;
-    border-radius: 25px;;
+  width: 100%;
+  height: 120px; // Vous voudrez peut-être rendre cela plus flexible ou adaptable
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
 
-    display: flex;
-    justify-content: center; // Centre le contenu horizontalement
-    align-items: center; // Centre le contenu verticalement
-  
-    h1 {
-      color: white; // Ou la couleur du texte correspondant à votre design
-      margin: 0; // Élimine la marge par défaut du titre
-      font-size: 2.5rem; // Taille de la police à ajuster selon le design
-      font-weight: bold; // Épaisseur de la police si nécessaire
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.2); // Assombrir légèrement pour une meilleure lisibilité
+    border-radius: inherit;
+    z-index: 1;
+  }
+
+  .banner-text {
+    position: relative;
+    color: white;
+    text-align: center;
+    font-weight: 400;
+    font-size: xxx-large; // Cette taille de police peut être trop grande pour les mobiles
+    z-index: 2;
+  }
+
+  // Media query pour les tablettes
+  @media (max-width: 768px) {
+    height: 100px; // Taille de bannière réduite pour les tablettes
+    padding: 1.5rem 0;
+
+    .banner-text {
+      font-size: xx-large; // Taille de police réduite pour les tablettes
     }
-  }  
+  }
+
+  // Media query pour les téléphones mobiles
+  @media (max-width: 480px) {
+    height: 80px; // Taille de bannière encore plus réduite pour les mobiles
+    padding: 1rem 0;
+    border-radius: 15px; // Rayon de bordure adapté aux petits écrans
+
+    .banner-text {
+      font-size: x-large; // Taille de police adaptée pour les mobiles
+    }
+  }
+}
