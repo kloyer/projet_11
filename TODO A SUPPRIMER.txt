@@ -1,1 +1,0 @@
-faire le redirect si l'id d'un logement n'est pas trouvé
