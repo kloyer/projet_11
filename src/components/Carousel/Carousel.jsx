@@ -20,23 +20,27 @@ function Carousel({ images }) {
 
   return (
     <div className="image-carousel-container">
-      <button className="carousel-arrow left" onClick={prevImage}>
-        <img src={leftArrow} alt="Previous" />
-      </button>
-      
+      {images.length > 1 && (
+        <>
+          <button className="carousel-arrow left" onClick={prevImage}>
+            <img src={leftArrow} alt="Previous" />
+          </button>
+          
+          <button className="carousel-arrow right" onClick={nextImage}>
+            <img src={rightArrow} alt="Next" />
+          </button>
+
+          <div className="image-counter">
+            {currentImageIndex + 1}/{images.length}
+          </div>
+        </>
+      )}
+
       <img
         src={images[currentImageIndex]}
         alt="Logement image"
         className="carousel-image"
       />
-      
-      <button className="carousel-arrow right" onClick={nextImage}>
-        <img src={rightArrow} alt="Next" />
-      </button>
-      
-      <div className="image-counter">
-        {currentImageIndex + 1}/{images.length}
-      </div>
     </div>
   );
 }
