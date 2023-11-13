@@ -2,24 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import Collapse from '../../components/Collapse/Collapse';
 import Carousel from '../../components/Carousel/Carousel';
+import Rating from '../../components/Rating/Rating';
 import logements from '../../datas/logements.json';
 import './Logement.scss';
-
-function StarRating({ rating }) {
-  const ratingStars = Array.from({ length: 5 }, (_, index) => {
-    return index < rating ? '★' : '☆';
-  });
-
-  return (
-    <div className="star-rating">
-      {ratingStars.map((star, index) => (
-        <span key={index} className={star === '★' ? 'filled-star' : 'empty-star'}>
-          {star}
-        </span>
-      ))}
-    </div>
-  );
-}
 
 function Logement() {
   const [logement, setLogement] = useState(null);
@@ -60,7 +45,7 @@ function Logement() {
             <p>{logement.host.name}</p>
         </div>
         <div className="logement-rating">
-            <StarRating rating={parseInt(logement.rating, 10)} />
+            <Rating rating={parseInt(logement.rating, 10)} />
           </div>
         </div>
       </div>

@@ -1,4 +1,5 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
+// Je crois qu'il confond l'obet Image avec une description texte type "image de machin".
 import React, { useState } from 'react';
 import leftArrow from '../../assets/images/arrow-left.png';
 import rightArrow from '../../assets/images/arrow-right.png';

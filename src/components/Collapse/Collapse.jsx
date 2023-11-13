@@ -4,7 +4,7 @@ import arrowUpDown from '../../assets/images/arrow-up-down.png';
 
 function Collapse({ title, children }) {
   const [isOpen, setIsOpen] = useState(false);
-  const contentRef = useRef(null);
+  const contentRef = useRef(null); // ???
 
   const toggle = () => {
     setIsOpen(!isOpen);
