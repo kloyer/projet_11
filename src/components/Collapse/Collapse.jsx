@@ -16,10 +16,6 @@ function Collapse({ title, children }) {
     setIsOpen(!isOpen);
   };
 
-  // Calculating the height for the content based on its open state
-  // When open, it uses the scrollHeight of the content, otherwise 0px
-  //const contentHeight = isOpen ? `${contentRef.current.scrollHeight}px` : '0px';
-
   // Returning the JSX for the collapse component
   return (
     <div className={`collapse-container ${isOpen ? 'open' : 'closed'}`}>
