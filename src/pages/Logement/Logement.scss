@@ -71,17 +71,7 @@
 
 .logement-rating {
   display: flex;
-  justify-content: end;
-
-  .star-rating {
-      font-size: 1.5em;
-      color: #FF6060;
-      font-weight: 900;
-
-      .empty-star {
-        color: #cccccc;
-      }
-    }      
+  justify-content: end;   
 }
 
 .logement-collapse-sections {
@@ -130,7 +120,7 @@
   .logement-host {
     flex-direction: row-reverse;
     align-items: flex-end;
-    width: 100%;
+    width: 50%;
     margin: 0;
   }
 
@@ -151,7 +141,7 @@
     .location,
     p {
       font-size: 16px;
-      width: 25%;
+      width: 100%;
     }
   }
 
@@ -162,12 +152,8 @@
   .logement-host {
     flex-direction: row-reverse;
     align-items: flex-end;
-    width: 100%;
+    width: 50%;
     margin: 0;
-  }
-  
-  .star-rating {
-    font-size: 1em;
   }
 
   .section-right {
