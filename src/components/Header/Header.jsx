@@ -1,15 +1,26 @@
 import React from 'react';
-import { useLocation } from 'react-router-dom';
 import './Header.scss';
-import logo from '../../assets/images/logo-header.png'; // Assurez-vous que le chemin est correct
 
+// Importing useLocation hook from react-router-dom for accessing the current route's location
+import { useLocation } from 'react-router-dom';
+
+// Importing the logo image
+import logo from '../../assets/images/logo-header.png'; // Ensure the path is correct
+
+// Header functional component
 function Header() {
+  // Getting the current location object
   const location = useLocation();
+
+  // Extracting the pathname from the location object to determine the current route
   const currentPath = location.pathname;
 
+  // Returning the JSX for the header
   return (
     <header className="header-container">
       <a href="/"><img src={logo} alt="Kasa logo" className="header-logo" /></a>
+
+      {/* Navigation menu */}
       <nav className="navigation">
         <ul>
           <li>
@@ -24,4 +35,5 @@ function Header() {
   );
 }
 
+// Exporting the Header component for use in other parts of the application
 export default Header;
