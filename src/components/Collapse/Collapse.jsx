@@ -18,28 +18,19 @@ function Collapse({ title, children }) {
 
   // Calculating the height for the content based on its open state
   // When open, it uses the scrollHeight of the content, otherwise 0px
-  const contentHeight = isOpen ? `${contentRef.current.scrollHeight}px` : '0px';
+  //const contentHeight = isOpen ? `${contentRef.current.scrollHeight}px` : '0px';
 
   // Returning the JSX for the collapse component
   return (
-    <div className="collapse-container">
+    <div className={`collapse-container ${isOpen ? 'open' : 'closed'}`}>
       {/* Toggle button with an image indicating its state (open or closed) */}
       <button className="collapse-toggle" onClick={toggle}>
         {title}
-        <img 
-          src={arrowUpDown} 
-          alt="Toggle" 
-          className={`arrow-icon ${isOpen ? 'up' : 'down'}`}
-          style={{ transform: isOpen ? 'rotate(180deg)' : 'none' }}
-        />
+        <img src={arrowUpDown} alt="Toggle" className={`arrow-icon ${isOpen ? 'up' : 'down'}`}/>
       </button>
 
-      {/* Collapsible content section */}
-      <div
-        ref={contentRef} // Reference to the content div for dynamic height calculation
-        className="collapse-content"
-        style={{ maxHeight: contentHeight }} // Dynamic style based on open state
-      >
+      {/* Collapse content section */}
+      <div className="collapse-content">
         {children}
       </div>
     </div>

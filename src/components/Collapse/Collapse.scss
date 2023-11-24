@@ -39,10 +39,19 @@
     }
   }
   
-  .collapse-content {
+  &.open .collapse-content {
+    max-height: 1000px;
     overflow: hidden;
-    transition: max-height 0.5s ease;
+    transition: max-height 0.3s ease-in-out;
+  }
+  
+  &.closed .collapse-content {
     max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+  }
+
+  .collapse-content {
     overflow: hidden;
     background-color: #F6F6F6;
     position: relative;
@@ -54,9 +63,13 @@
       list-style: none;
       margin: 0;
     }
-    
-    &.open {
-      max-height: 2000px;
-    }
+  }
+
+  &.open .arrow-icon {
+    transform: rotate(180deg);
+  }
+  
+  &.closed .arrow-icon {
+    transform: rotate(0deg);
   }
 }
